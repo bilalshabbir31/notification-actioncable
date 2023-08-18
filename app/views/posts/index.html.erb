@@ -2,6 +2,13 @@
 
 <h1>Posts</h1>
 
+<button
+  data-controller="notification"
+  data-action="notification#requestpermission"
+>
+Request Notification Permission
+</button>
+
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>

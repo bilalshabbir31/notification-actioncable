@@ -4,4 +4,14 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
   }
+  
+  requestpermission() {
+    console.log("requesting permission");
+    Notification.requestPermission().then(function (permission) {
+      if (permission === "granted"){
+        new Notification("Hi there")
+      }
+    })
+  }
+
 }

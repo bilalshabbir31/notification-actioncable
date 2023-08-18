@@ -5,13 +5,13 @@ export default class extends Controller {
   connect() {
   }
   
-  requestpermission() {
+  requestPermission() {
     console.log("requesting permission");
     Notification.requestPermission().then(function (permission) {
-      if (permission === "granted"){
-        new Notification("Hi there")
+      if (permission === "granted") {
+        new Notification("Hi there!");
       }
-    })
+    });
   }
 
 }
